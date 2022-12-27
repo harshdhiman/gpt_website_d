@@ -5,6 +5,7 @@ Live at https://gpt-website-d.netlify.app/
 This is a simple Website made using React and SCSS only. I wanted to not use TailwindCSS this time and go for SCSS (used mixins, includes, scss conditions etc.)
 
 also have lazy loaded components (code splitting)
+also tried to use BEM CSS Naming conventions.
 
 ## Tech
 
@@ -13,6 +14,7 @@ also have lazy loaded components (code splitting)
     - SCSS
     - TypeScript
     - Lazy Loading Components
+    - BEM CSS Naming Conventions
 
 ## Showcase
 
