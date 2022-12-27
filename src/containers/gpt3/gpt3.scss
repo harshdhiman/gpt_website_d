@@ -1,0 +1,82 @@
+@import "../../utils.scss";
+
+.gpt3 {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background: var(--color-footer);
+  background: radial-gradient(
+    circle at 30% -100%,
+    #042c54 25%,
+    rgba(4, 44, 84, 1) 85%,
+    rgba(27, 120, 222, 1) 100%
+  );
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+  .gpt3__feature {
+    display: flex;
+  }
+
+  .gpt3__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4rem 0 2rem;
+
+    @include xs() {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    @include sm() {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    h1 {
+      font-size: 34px;
+      line-height: 45px;
+      font-weight: 800;
+
+      @include xs() {
+        font-size: 24px;
+        line-height: 30px;
+      }
+
+      @include sm() {
+        font-size: 24px;
+        line-height: 30px;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 30px;
+      color: var(--color-subtext);
+      cursor: pointer;
+
+      @include xs() {
+        font-size: 14px;
+        line-height: 24px;
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  .gpt3__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-top: 2rem;
+
+    .feature__container {
+      flex: 1;
+      flex-direction: column;
+
+      @include xs() {
+        flex-direction: column;
+        flex: auto;
+      }
+    }
+  }
+}

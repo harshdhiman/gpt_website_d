@@ -1,0 +1,35 @@
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+@mixin animation($name, $duration: 1s, $timing: ease, $delay: 0s) {
+  -webkit-animation: $name $duration $timing $delay both;
+  animation: $name $duration $timing $delay both;
+}
+
+//
+//
+//
+
+@include keyframes(scale-up-center) {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+//
+//
+//
+
+.scale-up-center {
+  @include animation(scale-up-center);
+}

@@ -1,0 +1,69 @@
+@import "../../utils.scss";
+
+.psb {
+  display: flex;
+
+  @include sm() {
+    flex-direction: column;
+  }
+  @include xs() {
+    flex-direction: column;
+  }
+
+  .psb__image {
+    display: flex;
+    flex: 1;
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .psb__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 0.5rem;
+
+    h4 {
+      font-size: 16px;
+      line-height: 30px;
+      color: var(--color-text);
+
+      @include xs() {
+        font-size: 12px;
+      }
+    }
+
+    h4:last-child {
+      color: var(--color-subtext);
+    }
+
+    p {
+      font-size: 16px;
+      color: var(--color-text);
+      line-height: 30px;
+      margin-bottom: 2rem;
+
+      @include xs() {
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+
+    h1 {
+      font-size: 34px;
+      line-height: 45px;
+      font-weight: 800;
+
+      @include xs() {
+        font-size: 24px;
+        line-height: 30px;
+      }
+    }
+  }
+}

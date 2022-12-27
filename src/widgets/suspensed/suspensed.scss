@@ -1,0 +1,44 @@
+.suspensed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+$spCol: var(--color-text);
+.sp-loadbar {
+  width: 50px;
+  height: 18px;
+  border: 1px $spCol solid;
+  border-radius: 4px;
+  background: linear-gradient(
+    -60deg,
+    transparent 0%,
+    transparent 50%,
+    $spCol 50%,
+    $spCol 75%,
+    transparent 75%,
+    transparent
+  );
+  background-size: 20px 30px;
+  background-position: 0px 0px;
+  -webkit-animation: spLoadBar 0.8s infinite linear;
+  animation: spLoadBar 0.8s infinite linear;
+}
+@-webkit-keyframes spLoadBar {
+  from {
+    background-position: 0px 0px;
+  }
+  to {
+    background-position: -20px 0px;
+  }
+}
+@keyframes spLoadBar {
+  from {
+    background-position: 0px 0px;
+  }
+  to {
+    background-position: -20px 0px;
+  }
+}

@@ -1,0 +1,151 @@
+@import "../../utils.scss";
+
+.header {
+  display: flex;
+
+  @include sm() {
+    flex-direction: column;
+  }
+  @include xs() {
+    flex-direction: column;
+  }
+
+  .header__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-right: 5rem;
+
+    @include sm() {
+      margin-right: 0;
+      margin-bottom: 2rem;
+    }
+
+    @include xs() {
+      margin-right: 0;
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      font-size: 62px;
+      line-height: 75px;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+
+      @include xs() {
+        font-size: 40px;
+        line-height: 48px;
+      }
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 27px;
+      color: var(--color-text);
+      margin-top: 1.5rem;
+
+      @include xs() {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+
+    .header__content_input {
+      width: 100%;
+      display: flex;
+      margin: 2rem 0 1rem;
+
+      input {
+        flex: 2;
+        width: 100%;
+        border-radius: 5px 0 0 5px;
+        font-size: 20px;
+        line-height: 27px;
+        background-color: var(--color-footer);
+        color: white;
+        padding: 0 1rem;
+        height: 50px;
+        outline: none;
+        border: none;
+
+        @include xs() {
+          font-size: 12px;
+          line-height: 20px;
+        }
+
+        @include sm() {
+          font-size: 12px;
+          line-height: 20px;
+        }
+      }
+
+      button {
+        flex: 0.6;
+        font-size: 20px;
+        line-height: 27px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        padding: 0 0.5rem;
+        @include xs() {
+          flex: 0.6;
+          font-size: 12px;
+          line-height: 20px;
+        }
+
+        @include sm() {
+          flex: 0.6;
+          font-size: 12px;
+          line-height: 20px;
+        }
+      }
+    }
+
+    .header__content_people {
+      display: flex;
+      align-items: center;
+      margin-top: 2rem;
+
+      @include xs() {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      img {
+        height: 38px;
+
+        @include xs() {
+          height: 20px;
+        }
+      }
+
+      p {
+        margin-top: 0;
+        margin-left: 1rem;
+        color: white;
+        font-size: 12px;
+        text-align: center;
+
+        @include xs() {
+          font-size: 10px;
+          margin-left: 0;
+          margin-top: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .header__image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
