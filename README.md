@@ -1,6 +1,6 @@
 # GPT-3 Website (React & SCSS) (All TS)
 
-Live at
+Live at https://gpt-website-d.netlify.app/
 
 This is a simple Website made using React and SCSS only. I wanted to not use TailwindCSS this time and go for SCSS (used mixins, includes, scss conditions etc.)
 
